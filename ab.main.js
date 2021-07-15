@@ -42,15 +42,15 @@ function parse_rom() {
     var c = "";
 
     //c+="BIOS Magic: "+rom16(0).toString(16);
-    c += '<h3>ROM Information:</h3><div id="tbl_main">';
+    c += '<h3>ROM info:</h3><div id="tbl_main">';
     c += parse_main_rom();
-    c += gen_header("ATOM Table Information", "tbl_atom");
+    c += gen_header("ATOM table data", "tbl_atom");
     c += parse_atom();
-    c += gen_header("Command Table Information", "tbl_cmd");
+    c += gen_header("Command table data", "tbl_cmd");
     c += parse_commands();
-    c += gen_header("Data Table Information", "tbl_data");
+    c += gen_header("Data table data", "tbl_data");
     c += parse_data();
-    c += gen_header("PCI Info", "tbl_pci");
+    c += gen_header("PCI info", "tbl_pci");
     c += gen_hexdump(rom16(pointers.atom + 0x1c), 64);
     c += "<hr>";
     c += disassemble_commands();

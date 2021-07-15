@@ -18,13 +18,13 @@ body {
     text-align: center;
 }
 div {
-    display: inline-block;
-    width: 80%;
+    display: inline-grid;
 }
 
 #overlay {
     visibility: hidden;
     position: absolute;
+    display: inline-block;
     left: 0px;
     top: 0px;
     width: 100%;
@@ -32,6 +32,19 @@ div {
     text-align: center;
     z-index: 1000;
     background-image: url(bt.png);
+}
+
+#setuppan {
+    max-width: 480px;
+}
+
+#toc {
+    text-align: left;
+}
+
+#container {
+    max-width: 1280px;
+    min-width: 50%;
 }
 
 .vcenter {
